@@ -1,10 +1,10 @@
 //Jenkinsfile (Declarative Pipeline)
 pipeline {
-    agent any
+    agent { dockerfile true }
     stages {
-        stage('Build') {
+        stage('Example') {
             steps {
-                bat 'set'
+                sh 'echo $numb'
             }
         }
     }
